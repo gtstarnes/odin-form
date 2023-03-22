@@ -40,20 +40,21 @@
                     </div>
                     <div class="infoBox">
                         <label for="phone-number">Phone Number</label>
-                        <input type="tel" id="phone-number" name="phone" class="infoField" required>
+                        <input type="tel" id="phone-number" name="phone"
+                        pattern="^\d{10}$" class="infoField" required>
                     </div> 
                     <div class="infoBox">
                         <label for="password">Password</label>
-                        <input type="password" id="password" class="infoField error" required>
+                        <input type="password" id="password" class="infoField" required>
                     </div>
                     <div class="infoBox">
                         <label for="confirm-password">Confirm Password</label>
-                        <input type="password" id="confirm-password"  class="infoField error" required>
+                        <input type="password" id="confirm-password"  class="infoField" required>
                     </div>
-                    <p id="passwordError">Passwords do not match</p>
+                    <p id="errorMessage"></p>
                 </div>
                 
-                <button type="submit" id="btn">Create Account</button>
+                <button type="submit" id="btn" onclick="return errorCheck()">Create Account</button>
             </form>
             
             <p id="logIn">Already have an account? <a href="#">Log in</a></p>

@@ -124,12 +124,14 @@ label {
     box-shadow: 0 0 5px var(--blue);
 }
 
-#passwordError {
-    color: red;
-    margin: 0px 2px 0px 0px;
-    visibility: hidden;
+#info a {
+    text-decoration: none;
+    color: var(--darkBlue);
+    font-weight: bold;
 }
 
+
+/* Button Styles */
 button {
     height: 60px;
     width: 250px;
@@ -148,12 +150,19 @@ button:focus {
     background-color: var(--blue);
 }
 
-#info a {
-    text-decoration: none;
-    color: var(--darkBlue);
-    font-weight: bold;
+#logIn {
+    margin-top: -60px;
 }
 
-#logIn {
-    margin: -10px;
+
+/* Error styles */
+#errorMessage{
+    color: red;
+    margin: 0px 2px 0px 0px;
+    visibility: hidden;
+}
+
+.error {
+    border: 2px solid red;
+    box-shadow: 0 0 5px red;
 }
