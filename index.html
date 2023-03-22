@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-Up Form</title>
 </head>
@@ -11,36 +12,51 @@
     <main>
         <section class="left">
             <div class="logo">
-                <p>LOGO</p>
+                <p>LOREM</p>
             </div>
-            <p id="caption">Photo by <a href="https://unsplash.com/@liuliancheng" 
+            <footer>Photo by <a href="https://unsplash.com/@liuliancheng" 
                 target="_blank">Squidward Handsome</a> on <a href="https://www.unsplash.com" 
-                target="_blank">Unsplash</a></p>  
+                target="_blank">Unsplash</a></footer>  
         </section>
         
         <section class="info" id="info">
-            <h2>RANDOM TEXT</h2>
-            <div id="form">
-                <label for="first-name">First Name</label>
-                <input type="text" id="first-name" required>
-
-                <label for="last-name">Last Name</label>
-                <input type="text" id="last-name">
-
-                <label for="user-email">Email Address</label>
-                <input type="email" id="user-email" name="email" required>
-
-                <label for="phone-number">Phone Number</label>
-                <input type="tel" id="phone-number" name="phone" required>
+            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec metus id lorem faucibus vulputate. 
+                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aenean orci purus,
+                 rutrum a pretium non, dignissim ornare augue.</h2>
+            <h2>Lorem ipsum</h2>
+            <form action="#">
+                <div id="form">
+                    <div class="infoBox">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" class="infoField" required>
+                    </div>
+                    <div class="infoBox">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" class="infoField" required>
+                    </div>
+                    <div class="infoBox">
+                        <label for="user-email">Email Address</label>
+                        <input type="email" id="user-email" name="email" class="infoField" required>
+                    </div>
+                    <div class="infoBox">
+                        <label for="phone-number">Phone Number</label>
+                        <input type="tel" id="phone-number" name="phone" class="infoField" required>
+                    </div> 
+                    <div class="infoBox">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" class="infoField error" required>
+                    </div>
+                    <div class="infoBox">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password"  class="infoField error" required>
+                    </div>
+                    <p id="passwordError">Passwords do not match</p>
+                </div>
                 
-                <labrl for="password">Password</labrl>
-                <input type="password" id="password" required>
-
-                <label for="confirm-password">Confirm Password</label>
-                <input type="password" id="confirm-password" required>
-            </div>
-            <button type="submit">Create Account</button>
-            <p>Already have an account? <a href="#">Log in</a></p>
+                <button type="submit" id="btn">Create Account</button>
+            </form>
+            
+            <p id="logIn">Already have an account? <a href="#">Log in</a></p>
         </section>
 
     </main>

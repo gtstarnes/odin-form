@@ -1,6 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
+
+:root {
+    --blue: rgb(145, 183, 241);
+    --darkBlue: rgb(89, 149, 238);
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    background-color: rgb(145, 183, 241); 
+    background-color: var(--blue); 
     margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 
+    'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 main {
@@ -19,7 +32,7 @@ main {
     flex-direction: column;
 }
 
-.left, #caption a {
+.left, footer a {
     color: white;
 }
 
@@ -27,26 +40,120 @@ main {
     margin-top: 25%;
     background-color: rgba(0,0,0,50%);
     width: 100%;
-    height: 300px;        
+    height: 260px;        
     display: flex;
     align-content: center;
     justify-content: center;
 }
 
 .logo p {
-    font-size: 6rem;
+    font-size: 8rem;
+    font-family: 'Delicious Handrawn', cursive;
     align-self: center;
     justify-self: center;
 }
 
-#caption {
+footer {
     position: absolute;
     bottom: 0;
-    margin-bottom: 0;
+    margin-bottom: 10px;
     align-self: center;
+}
+
+
+
+/* Form styles */
+
+#info, .infoBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #info {
     background-color: rgb(241, 241, 237);
     width: 70%;
+    overflow: hidden;
+}
+
+#info > *, form > * {
+    margin-bottom: 40px;
+}
+
+#info > :not(form), button {
+    margin-left: 40px;
+}
+
+
+#form {
+    width: 100%;
+    height: 300px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    grid-template-rows: repeat(3, 60px);
+    column-gap: 60px;
+    row-gap: 10px;
+    padding-top: 40px;
+    padding-left: 40px;
+    box-shadow: 0px 4px 6px rgba(0,0,0,25%);
+}
+
+.infoBox {
+    justify-content: center;
+    margin: 0px;
+}
+
+label {
+    font-weight: bold;
+}
+
+.infoField {
+    width: 250px;
+    height: 30px;
+    margin-top: 4px;
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+
+
+.infoField:focus {
+    outline: none !important;
+    border: 1px solid var(--blue);
+    border-top: 3px solid var(--blue);
+    box-shadow: 0 0 5px var(--blue);
+}
+
+#passwordError {
+    color: red;
+    margin: 0px 2px 0px 0px;
+    visibility: hidden;
+}
+
+button {
+    height: 60px;
+    width: 250px;
+    color: white;
+    background-color: var(--darkBlue);
+    border: none;
+    border-radius: 10px;
+    font-size: 1.3rem;
+}
+
+button:hover {  
+    cursor: pointer;
+}
+
+button:focus {
+    background-color: var(--blue);
+}
+
+#info a {
+    text-decoration: none;
+    color: var(--darkBlue);
+    font-weight: bold;
+}
+
+#logIn {
+    margin: -10px;
 }
